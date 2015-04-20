@@ -1,0 +1,212 @@
+/* Color palette at http://www.colourlovers.com/palette/132637/Odd_but_trendy
+Light sky blue: #E0EFF1;
+Dark sky blue: #7DB4B5;
+Purple without brown: #680148;
+*/
+
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  font-size:.9em;
+}
+
+body{
+  font-family:Raleway, sans-serif;      margin:0 auto;
+  max-width:860px;
+  background:#FFFFFD;
+  border-radius:0 0 2em 2em; 
+  font-size:100%;
+}
+
+header {
+  text-align: center;
+}
+
+header img#headshot{
+  position: absolute;
+  left:50%;
+  border-radius:50%;
+}
+
+nav a{
+  text-decoration:none;
+  color: #7DB4B5;
+}
+
+nav li {
+  display:inline-block;
+  margin: 10px;
+  background: rgba(255,255,255, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 9px 18px;
+}
+#menu li a{
+  text-decoration:none;
+  color: #000;
+}
+#menu li:hover{
+  background: rgba(255,255,255, 0.8);
+}
+
+/*
+#menu li.active a:hover{
+  color: #000;
+}
+
+#menu li.active{
+  background:#666;
+  background: rgba(0,0,0, 0.5);
+}
+
+#menu li.active a{
+  color: #fff;
+}
+*/
+
+
+#menu{
+  position:fixed;
+  top:0;
+  left:0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin:0;
+}
+
+.logo{
+  display:block;
+  min-height:100px;
+  background-image:url("../images/personal_logo_silhouette.png");
+  background-size: 100px;
+  background-repeat: repeat-x;
+}
+
+h2{
+  color:#7DB4B5;
+}
+
+.content{
+  margin: 10px;
+  padding:10px;
+}
+
+#resume{
+  padding: 0 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+h1, h2{
+  text-align:center;
+}
+
+#col1, #col2, #col3{
+  min-width:28%;
+  max-width:33%;
+  float:left;
+padding-bottom: 1000px;
+  margin-bottom: -1000px;
+
+}
+
+div.resume_block {
+  padding:5px;
+  margin:5px;
+  line-height:100%;
+}
+
+#resume section{
+  border:none;
+  padding-bottom: 1000px;
+  margin-bottom: -1010px;
+}
+
+#contact{
+  min-width:200px;
+  padding:10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact p{
+  float:left;
+  padding:0 10px;
+  margin-top:22px;
+}
+
+#contact a{
+  text-decoration: underline;
+  color: grey;
+}
+
+#resume .date{
+  color:#7DB4B5;
+}
+
+#resume .blurb{
+  color:#680148;
+  display:block;
+  font-size:75%;
+}
+
+#honors p, #extra p, #skills p{
+  font-size:85%;
+  line-height:150%;
+  margin:0;
+  padding:0;
+}
+
+#projects h2{
+  color:white;
+}
+
+#projects div.project{
+  width:150px;
+  height:150px;
+  background-color:#680148;
+  float:left;
+  text-align:center;
+
+  border:1px white solid;
+  border-radius:50%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin:20px;
+}
+
+#interests section{
+  display:flex;
+  width:50%;
+  margin:0 auto;
+}
+
+#interests section div{
+  width:50%;
+  border:1px white solid;
+  text-align:center;
+}
+
+#interests section img{
+  width:100px;
+  margin:10px;
+}
+
+#interests section p{
+  display:block;
+  text-align:center;
+}
+
+img.icon{
+  width:25px;
+  height:25px;
+}
+
+
+.clear {clear: both;}
+.nodisplay {display:none;}   
