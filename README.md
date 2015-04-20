@@ -1,2 +1,2 @@
 # cather.github.io
-this is me
+exploring web with a personal website
