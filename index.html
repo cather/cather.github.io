@@ -12,119 +12,145 @@
 
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" type="text/css" href="js/javascript.fullPage.css">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/quickview.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.2.min.js"> </script>
-    <script type="text/javascript" src="js/javascript.fullPage.min.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-          anchors: ['top', 'resume', 'projects', 'interests', 'contact'],
-          menu: '#menu',
-          css3: true,
-          scrollingSpeed: 1000
-        });
-      });
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js">
     </script>
 
-     <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/salvattore.min.js">
+    </script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css">
+
+
+    <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
     <title>Cathy Ji</title>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', 'grey'],
+                anchors: ['top', 'about', 'resume', 'projects', 'interests', 'contact'],
+                menu: '#menu',
+                scrollingSpeed: 1000
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div id="top">
-        <header>
-            <a href="index.php"><img src="images/hi_plain.png" /></a>
-            <img id="headshot" src="images/headshot_200x200.jpg" />
-        </header>
-        <nav>
-            <ul id="menu">
-                <li data-menuanchor="top" class="active"><a href="#top">Home</a></li>
-                <li data-menuanchor="resume"><a href="#resume">Resume</a></li>
-                <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
-                <li data-menuanchor="interests"><a href="#interests">Interests</a></li>
-                <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- top -->
+    <header>
+        <h1 class="nodisplay">Hi, I'm Cathy </h1>
+    </header>
 
-    <div class="fullpage">
-        <div id="resume" class="section active">
-            <div class="column">
-                <h1>Things about me <a href="docs/CathyJi_Resume.pdf"> <img src="images/bw_download.png" class="icon"/></a></h1>
-                <div id="col1">
+    <nav>
+        <ul id="menu">
+            <li data-menuanchor="top" class="active"><a href="#top">Home</a></li>
+            <li data-menuanchor="about"><a href="#about">About</a></li>
+            <li data-menuanchor="resume"><a href="#resume">Resume</a></li>
+            <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
+            <li data-menuanchor="interests"><a href="#interests">Interests</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="fullpage">
+        <div id="top_section" class="section active">
+            <a href="#top"><img src="images/hi_plain.png" /></a>
+            <img id="headshot" src="images/headshot_200x200.png" />
+        </div>
+        <!-- top -->
+    
+        <div id="about_section" class="section">
+            <p class="umm">Hi. My name is Cathy. I'm a junior studying computer engineering at the University of Southern California. Here are some words that describe me.</p>
+            <p class="keyword-wrapper">
+                <span class="keyword">Engineer</span>
+                <span class="keyword">Developer</span>
+                <span class="keyword">Student</span>
+            </p>
+            <p class="umm">I like these words.</p>
+            <p class="keyword-wrapper">
+                <span class="keyword">Soliloquy</span>
+                <span class="keyword">Splendiferous</span>
+            </p>
+            <p class="umm">I like this poem.</p>
+            <p class="keyword-wrapper">
+                <span class="keyword"><a href="http://www.poemhunter.com/best-poems/charles-bukowski/splash/" target="_blank">Splash</a></span>
+            </p>
+            <p class="umm">Here are some more words.</p>
+            <p class="keyword-wrapper">
+                <span class="keyword">Puzzler</span>
+                <span class="keyword">Tree hugger</span>
+                <span class="keyword">Juice drinker</span>
+                <span class="keyword">Cat person</span>
+                <span class="keyword">Tamale lover</span>
+                <span class="keyword">East coast (now Southern California) girl</span>
+            </p>
+            <p class="umm">Scroll down to learn more</p>
+        </div>
+        <!-- about -->
+
+        <div id="resume_section" class="section">
+            <div id="resume_grid" data-columns>
+                <h1>My resume<a href="docs/CathyJi_Resume.pdf" target="_blank"> <img src="images/bw_download.png" class="icon"/></a></h1>
+                <div class="column size-1of3">
                     <section id="education">
                         <h2>education</h2>
                         <div class="resume_block">
-                            <p>University of Southern California <span class="date">May 2017</span>
-                                <span class="blurb">B.S. Computer Engineering and Computer Science</span>
+                            <p>University of Southern California <span class="subcaption">May 2017</span>
+                                <span class="blurb">B.S. Computer Engineering & Computer Science</span>
                                 <span class="blurb">USC Presidential Scholar, FLAS Fellow</span>
                                 <span class="blurb">GPA: 3.76/4.0</span>
                             </p>
                         </div>
                     </section>
-                    <section id="skills">
-                        <h2>skills</h2>
-                        <div class="resume_block">
-                            <p>C/C++, Java, Python, Perl, HTML, CSS, Javascript, Verilog</p>
-                            <p>Inkscape, Photoshop, Paint.NET</p>
-                        </div>
-                    </section>
                     <section id="honors">
                         <h2>honors</h2>
                         <div class="resume_block">
-                            <p>10xList Engineer Selection</p>
-                            <p>Tau Beta Pi Engineering Honor Society</p>
-                            <p>National Merit SAIC Scholarship</p>
-                            <p>Alpha Lambda Delta Honor Society Scholarship</p>
-                            <p>USC Bartlett Scholarship</p>
-                            <p>USC Alumni Club of the Nation’s Capital Scholarship</p>
+                            <p>10xList Engineer <span class="subcaption">Top 500 Women College Engineers in the United States</span></p>
+                            <p>Tau Beta Pi Engineering Honor Society <span class="subcaption">Top 13% of class</span></p>
+                            <p>1st Place, “It’s All About Inclusion” Computer Science Competition <span class="subcaption">Accessible technology proposal</span></p>
                         </div>
                     </section>
                     <section id="extra">
-                        <h2>extra-curriculars</h2>
+                        <h2>extracurriculars</h2>
                         <div class="resume_block">
-                            <p>Women in Computing, President</p>
-                            <p>USC Bicycle Coalition, President</p>
-                            <p>Tau Beta Pi, USC Chapter Program Director</p>
-                            <p>USC LGBTQ Service and Outreach, Publicity Chair</p>
+                            <p>Women in Computing, <span class="subcaption">Co-President</span></p>
+                            <p>USC Bicycle Coalition, <span class="subcaption">President</span></p>
+                            <p>Tau Beta Pi Engineering, <span class="subcaption">Program Director</span></p>
+                            <p>USC LGBTQ Outreach, <span class="subcaption">Publicity Chair</span></p>
                         </div>
                     </section>
                 </div>
-                <div id="col2">
+                <div class="column size-1of3">
                     <section id="work">
                         <h2>work</h2>
                         <div class="resume_block">
-                            <p>Global Playground, Web Content Manager <span class="date">October 2011 - present</span></p>
+                            <p>Global Playground, Web Content Manager <span class="subcaption">October 2011 - present</span></p>
                             <span class="blurb">Managing, updating, and improving the official Global Playground website</span>
-                            <p>Intel Corporation, Technical Intern <span class="date">Summer 2014</span></p>
+                            <p>Intel, MIC Software Intern <span class="subcaption">Summer 2014</span></p>
                             <span class="blurb">Developed streaming library within Intel® Manycore Platform Software Stack</span>
-                            <p>Intel Corporation, Technical Intern <span class="date">Summer 2013</span></p>
+                            <p>Intel, BIOS Intern <span class="subcaption">Summer 2013</span></p>
                             <span class="blurb">Developed Python API layer of Intel® BIOS Implementation Test Suite (open source at <a href="http://biosbits.org/">biosbits.org</a>)</span>
-                            <p>USC Spatial Sciences Institute, Student Researcher <span class="date">Fall 2013</span></p>
+                            <p>USC Spatial Sciences Institute, Student Researcher <span class="subcaption">Fall 2013</span></p>
                             <span class="blurb">Developed Tesseract OCR-based software map analysis</span>
-                            <p>NASA Goddard Space Flight Center, Web Development Intern <span class="date">Summer 2011</span></p>
+                            <p>NASA Goddard, Web Intern <span class="subcaption">Summer 2011</span></p>
                             <span class="blurb">Designed and updated six spaceflight instrument websites</span>
                         </div>
                     </section>
                 </div>
-                <div id="col3">
+                <div class="column size-1of3">
                     <section id="resume_projects">
                         <h2>projects</h2>
                         <div class="resume_block">
-                            <p>FemAffirm</p>
-                            <span class="blurb">Twitterbot to fight internet trolls. Created at the 2015 Fembot Hackathon.</span>
                             <p>Open Canteen</p>
                             <span class="blurb">Yelp-like web app to search, rate, and review foods in university cafeterias. Class project created in a team of 3.</span>
                             <p>SimCity 201</p>
@@ -133,106 +159,125 @@
                             <span class="blurb">Personal micro-journal web app. Created in a team of 5 at LA Hacks 2013 (top 5 out of 44)</span>
                             <p>Audio Alert</p>
                             <span class="blurb">Android app using FFT to alert hearing-impared users of auditory warning sounds. Created  in a team of 3 at 2013 Project: Possibility SS12 Hackathon (1st Place)</span>
-                            <p>"Sound to Color/Vibration System" Proposal</p>
-                            <span class="blurb">Proposal and pseudocode for a semantic, non-auditory translation of sound for the hearing-impaired. Created in a team of 2 for the “It’s All About Inclusion” Computer Science Competition (1st Place)</span>
                             <p>High Flyer</p>
                             <span class="blurb">Obstacle avoidance game created in C++ and Qt.</span>
                         </div>
                     </section>
                 </div>
+                <div class="clear"></div>
+
             </div>
-            <!--column-->
+            <!-- resume-grid -->
+            <section id="skills">
+                <h2>skills</h2>
+                <div class="keyword-wrapper">
+                    <p>
+                        <span class="keyword">C/C++</span>
+                        <span class="keyword">Java</span>
+                        <span class="keyword">Python</span>
+                        <span class="keyword">Perl</span>
+                        <span class="keyword">HTML</span>
+                        <span class="keyword">CSS</span>
+                        <span class="keyword">Javascript</span>
+                        <span class="keyword">Verilog</span>
+                        <span class="keyword">Inkscape</span>
+                    </p>
+                </div>
+            </section>
         </div>
         <!-- resume -->
-        <div id="projects" class="section">
-            <h1>Things I've worked on <a href="https://github.com/cather"><img src="images/bw_laptop.png" class="icon"/></a></h1>
-            <div class="project">
-                <h2>FemAffirm</h2>
-            </div>
-            <div class="project">
-                <h2>Open Canteen</h2>
-            </div>
-            <div class="project">
-                <h2>Star Hunter</h2>
-            </div>
-            <div class="project">
-                <h2>SimCity 201</h2>
-            </div>
-            <div class="project">
-                <h2>Shortlog</h2>
-            </div>
-            <div class="project">
-                <h2>High Flyer</h2>
-            </div>
-            <div class="project">
-                <h2>Audio Alert</h2>
-            </div>
+
+        <div id="projects_section" class="section">
+            <h1>Things I've worked on <a href="https://github.com/cather"><img src="images/bw_laptop.png" class="icon"></a></h1>
+            <div id="project-container">
+                <div class="project">
+                    <p class="project-title">FemAffirm</p>
+                </div>
+                <div class="project">
+                    <p class="project-title">Open Canteen</p>
+                    <p class="description"> </p>
+                </div>
+                <div class="project">
+                    <p class="project-title">Star Hunter</p>
+                    <p class="description"> </p>
+                </div>
+                <div class="project">
+                    <p class="project-title">SimCity 201</p>
+                    <p class="description"> </p>
+                </div>
+                <div class="project">
+                    <p class="project-title">Shortlog</p>
+                    <p class="description"> </p>
+                </div>
+                <div class="project">
+                    <p class="project-title">High Flyer</p>
+                    <p class="description"> </p>
+                </div>
+                <div class="project">
+                    <p class="project-title">Audio Alert</p>
+                    <p class="description"> </p>
+                </div>
+            </div> <!-- project-container -->
+        </div> <!-- projects -->
+
+        <div id="interests_section" class="section">
+            <h1>Things I like <img src="images/bw_happy.png" class="icon"/></h1>
+            <div id="interest-container">
+                <div class="interest">
+                    <img src="images/bw_bike.png" />
+                    <p class="keyword">Bikes</p>
+                    <p>There's something empowering about riding a bike. As head of the USC Bicycle Coalition and chapter representative for the LA County Bicycle Coalition, most of my energy these days is spent on bike advocacy and education.</p>
+                </div>
+                <div class="interest">
+                    <img src="images/bw_tree.png" />
+                    <p class="keyword">Nature</p>
+                    <p>Keep nature natural. In daily life and as part of the sustainability movement making waves on campus, I'm a staunch advocate for our planet Earth.</p>
+                </div>
+                <div class="interest">
+                    <img src="images/bw_rugby.png" />
+                    <p class="keyword">Rugby</p>
+                    <p>Tore 3 ligaments in my first game. GG.</p>
+                </div>
+                <div class="interest">
+                    <img src="images/bw_oar.png" />
+                    <p class="keyword">Rowing</p>
+                    <p>Proudly rowed for USC Women's and the Hong Kong University of Science and Technology. </p>
+                </div>
+                <div class="interest">
+                    <img src="images/bw_rainbow.png" />
+                    <p class="keyword">Rainbows</p>
+                    <p>Strong supporter of equality for all, whether through volunteering, organizing professional events, or marching in a pride parade.</p>
+                </div>
+                <div class="interest">
+                    <img src="images/bw_mouse.png" />
+                    <p class="keyword">Tech</p>
+                    <p>Innovation and diversity go hand in hand. As president of USC Women in Computing, I'm building community, supporting and raising up my lady peers in tech, and doing my part to keep the percentage of USC women in CS above 20%.</p>
+                </div>
+            </div> <!-- interests -->
             <div class="clear"></div>
         </div>
-        <!-- projects -->
+        <!-- interest-container -->
 
-        <div id="interests" class="column">
-            <h1>Things I like <img src="images/bw_happy.png" class="icon"/></h1>
-            <section id="environment">
-                <div>
-                    <img src="images/bw_bike.png" />
-                    <p>Bikes</p>
-                </div>
-                <div>
-                    <img src="images/bw_tree.png" />
-                    <p>The environment</p>
-                </div>
-            </section>
-            <section id="sports">
-                <div>
-                    <img src="images/bw_rugby.png" />
-                    <p>Rugby</p>
-                </div>
-                <div>
-                    <img src="images/bw_oar.png" />
-                    <p>Rowing</p>
-                </div>
-            </section>
-            <section id="social_issues">
-                <div>
-                    <img src="images/bw_rainbow.png" />
-                    <p>LGBTQ equality</p>
-                </div>
-                <div>
-                    <img src="images/bw_mouse.png" />
-                    <p>Diversity in tech</p>
-                </div>
-            </section>
-        </div>
-        <!-- interests -->
-        <div id="contact" class="section">
-            <hr/>
+        <div id="contact_section" class="section">
             <h2>get in contact</h2>
             <p><a href="https://www.linkedin.com/in/catherineji" target="_blank">LinkedIn</a></p>
             <p><a href="https://github.com/cather" target="_blank">Github</a></p>
             <p><a href="mailto:jicathyh@gmail.com">Email</a></p>
-            <hr/>
+            <p><a href="docs/CathyJi_Resume.pdf" target="_blank">Resume</a><p>
+            <div class="clear"></div>
+            <div class="logo"></div>
         </div>
         <!-- contact -->
-        <div class="clear"></div>
 
     </div>
     <!-- fullpage-->
- 
+
     <footer>
-        <div class="logo"></div>
+        <p> Created by Cathy Ji </p>
         <div class="clear"></div>
     </footer>
 
-    <script>
-    $("#menu > ul > li").click(function() {
-        $(this).closest('ul').find('li').each(function() {
-            $(this).removeClass('active');
-        });
-        $(this).addClass('active');
-    });
-    </script>
-
+    </div>
 </body>
 
 </html>
