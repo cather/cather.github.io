@@ -22,6 +22,9 @@
     <script type="text/javascript" src="js/salvattore.min.js">
     </script>
 
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js">
+//scrollOverflow
+    </script>
     <script type="text/javascript" src="js/jquery.fullPage.min.js">
     </script>
     <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css">
@@ -31,18 +34,19 @@
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
-    <title>Cathy Ji</title>
-
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', 'grey'],
-                anchors: ['top', 'about', 'resume', 'projects', 'interests', 'contact'],
-                menu: '#menu',
-                scrollingSpeed: 1000
-            });
-        });
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', 'grey'],
+        anchors: ['top', 'resume', 'projects', 'interests', 'contact'],
+        menu: '#menu',
+        scrollOverflow: true
+    });
+});
     </script>
+
+
+    <title>Cathy Ji</title>
 </head>
 
 <body>
@@ -53,7 +57,6 @@
     <nav>
         <ul id="menu">
             <li data-menuanchor="top" class="active"><a href="#top">Home</a></li>
-            <li data-menuanchor="about"><a href="#about">About</a></li>
             <li data-menuanchor="resume"><a href="#resume">Resume</a></li>
             <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
             <li data-menuanchor="interests"><a href="#interests">Interests</a></li>
@@ -63,41 +66,21 @@
 
     <div id="fullpage">
         <div id="top_section" class="section active">
-            <a href="#top"><img src="images/logos/hi_plain.png" /></a>
+            <a href="#top_section"><img src="images/logos/hi_plain.png" /></a>
             <img id="headshot" src="images/headshot_200x200.png" />
-        </div>
-        <!-- top -->
-    
-        <div id="about_section" class="section">
-            <h1>About me</h1>
-            <p class="umm">Hi. My name is Cathy. I'm a junior studying computer engineering at the University of Southern California. Here are some words that describe me.</p>
+
             <p class="keyword-wrapper">
                 <span class="keyword">Engineer</span>
                 <span class="keyword">Developer</span>
                 <span class="keyword">Student</span>
             </p>
-            <p class="umm">These words are fun to say.</p>
-            <p class="keyword-wrapper">
-                <span class="keyword">Soliloquy</span>
-                <span class="keyword">Splendiferous</span>
-            </p>
-            <p class="umm">I like the combination of words in this poem.</p>
-            <p class="keyword-wrapper">
-                <span class="keyword"><a href="http://www.poemhunter.com/best-poems/charles-bukowski/splash/" target="_blank">Splash</a></span>
-            </p>
-            <p class="umm">More words that apply to me.</p>
-            <p class="keyword-wrapper">
-                <span class="keyword">Puzzler</span>
-                <span class="keyword">Tree hugger</span>
-                <span class="keyword">Cat person</span>
-                <span class="keyword">Tamale lover</span>
-            </p>
-            <p class="umm">Scroll down to learn more</p>
         </div>
-        <!-- about -->
+        <!-- top -->
+
+
 
         <div id="resume_section" class="section">
-            <div id="resume_grid" data-columns>
+            <div id="resume_grid" data-columns="3">
                 <h1>My resume <a href="docs/CathyJi_Resume.pdf" target="_blank"><img src="images/logos/bw_download.png" class="icon"/></a></h1>
                 <div class="column size-1of3">
                     <section id="education">
@@ -186,101 +169,110 @@
         <!-- resume -->
 
         <div id="projects_section" class="section">
-            <h1>Things I've worked on <a href="https://github.com/cather"><img src="images/logos/bw_laptop.png" class="icon"></a></h1>
+            <h1>Things I've worked on <a href="https://github.com/cather" target="_blank"><img src="images/logos/bw_laptop.png" class="icon"></a></h1>
             <div id="project-container">
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">cathyji.me</h2>
+                    <img src="images/projects/personalwebsite_home.png" />
                     <p class="description">My personal website. Come here to learn about me. </p>
                     <p class="role_and_details">Created in HTML, CSS and jQuery. Design improvements (currently) unrolling weekly. Just sort of playing around here. </p>
-                    <img src="images/projects/personalwebsite_home.png"/>
                     <p class="project_source">You're already here. <a href="http://cathyji.me/" target="_blank">Want to go again?</a></p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">FemAffirm</h2>
+                    <img src="images/projects/femaffirm_logo.png" />
                     <p class="description">Twitter bot within the Troll Buster Corps, a Twitter account designed to fight internet bullies. Femaffirm sends motivational messages from notable feminists and allies to those in need. </p>
-                    <p class="role_and_details">Written in Google Script as the sole developer at the March 2013 Fembot Collective Hackathon. </p>
-                    <img src="images/projects/femaffirm_logo.png"/>
+                    <p class="role_and_details">Written in Google Script as the sole developer at the March 2015 Fembot Collective Hackathon. </p>
                     <p class="project_source">Sorry... project still under wraps</p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">Open Canteen</h2>
+                    <img src="images/projects/opencanteen_home.png" />
                     <p class="description">A spin-off of Open Rice (a popular Hong Kong restaurant-rating web service) specifically for cafeterias in the Hong Kong University of Science and Technology (HKUST).</p>
                     <p class="role_and_details">Simple web application with a Perl backend. Implemented search features to "query" and modify our faux text file-based database via Perl scripting. Also made front-end HTML and CSS contributions. Created in a team of 3 for a Unix and Shell Scripting class during study abroad at HKUST. </p>
-                    <img src="images/projects/opencanteen_home.png"/>
                     <p class="project_source"><a href="https://github.com/kyuhyunc/open_canteen" target="_blank">Rate the cha su buns</a></p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">Star Hunter</h2>
+                    <img src="images/projects/starhunter_open.png" />
                     <p class="description">Help restore the sun's energy by collecting stars. The dark clouds are out to get you; avoid them, or blast them with a shot of light.</p>
                     <p class="role_and_details">A platformer made with Javascript and built in SVG. A solo project for my Internet Computing class.</p>
-                    <img src="images/projects/starhunter_open.png"/>
                     <p class="project_source">Link coming soon</p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">SimCity 201</h2>
+                    <img src="images/projects/simcity201_cityview.png" />
                     <p class="description">An agent-oriented simulations of citizens in a city. The people of SimCity 201 have jobs (or not), travel around town, have physiological and psychological needs, and commit crimes. Assign them actions, set them on a new career path, or just watch them go about their their lives. </p>
                     <p class="role_and_details">Developed in Java with basic animation using Swing. Personally implemented and unit tested the roles and situations in restaurant and bank environments (customers, employees, business operations, crimes). Designed over the course of 6 weeks in a team of 6 as our final project to Intro to Software Development.</p>
-                    <img src="images/projects/simcity201_cityview.png"/>
                     <p class="project_source">Link coming soon</p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">Shortlog</h2>
+                    <img src="images/projects/shortlog_login.png" />
                     <p class="description"> A personal digital micro-journal primarily interfaced via your phone. Users text entries to the Shortlog number, which stores the logs in your private journal. Web log-in, which requires phone authentication rather than a username or password, allows viewing past entries, entry patterns, and mood/entry analysis.</p>
                     <p class="role_and_details">Styled the front end of the web portal with CSS and Javascript. Created in a team of 5 at the 2013 LA Hacks, placing in the top 5 out of 44 teams. </p>
-                    <img src="images/projects/shortlog_login.png"/>
                     <p class="project_source"><a href="http://shortlog.me/" target="_blank">Log an entry</a></p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">High Flyer</h2>
+                    <img src="images/projects/highflyer_gameplay.png" />
                     <p class="description">Send the High Flyer up, up, up to a successful mission collecting stars by avoiding space debris and aliens. </p>
                     <p class="role_and_details"> A simple avoider game created in C++ using the Qt framework. Designed, developed, animated, and documented solo as a final project for my Data Structures class.</p>
-                    <img src="images/projects/highflyer_gameplay.png"/>
                     <p class="project_source"><a href="https://github.com/cather/High-Flyer" target="_blank">Play High Flyer</a></p>
                 </div>
-                <div class="project slide">
+                <div class="project">
                     <h2 class="project-title">Audio Alert</h2>
+                    <img src="images/projects/aalert_home.png" />
                     <p class="description">Audio Alert, or AAlert, is an Android-based phone app that analyzes sounds from the environment for emergency alerts, such as fire alarms and police sirens, and notifies its hearing-impaired users.</p>
                     <p class="role_and_details">Implemented vibrational and toast notification system, and designed the app's graphics and interface. Created in a team of 3 for the 2013 Project: Possibility SS12 Hackathon where it won 1st Place. Later won 1st place in the USC Transmedia Forum in mobile.</p>
-                    <img src="images/projects/aalert_home.png"/>
                     <p class="project_source"><a href="http://transmedia.usc.edu/portfolio/aalert/" target="_blank">Learn more</a></p>
                 </div>
-            </div> <!-- project-container -->
-        </div> <!-- projects -->
+            </div>
+            <!-- project-container -->
+        </div>
+        <!-- projects -->
 
         <div id="interests_section" class="section">
             <h1>Things I like <img src="images/logos/bw_happy.png" class="icon"/></h1>
             <div id="interest-container">
                 <div class="interest">
                     <img src="images/logos/bw_bike.png" />
+                    <div class="clear"></div>
                     <p class="keyword">Bikes</p>
                     <p>There's something empowering about riding a bike. As head of the USC Bicycle Coalition and chapter representative for the LA County Bicycle Coalition, most of my energy these days is spent on bike advocacy and education.</p>
                 </div>
                 <div class="interest">
                     <img src="images/logos/bw_tree.png" />
+                    <div class="clear"></div>
                     <p class="keyword">Nature</p>
                     <p>Keep nature natural. In daily life and as part of the sustainability movement making waves on campus, I'm a staunch advocate for our planet Earth.</p>
                 </div>
                 <div class="interest">
                     <img src="images/logos/bw_rugby.png" />
+                    <div class="clear"></div>
                     <p class="keyword">Rugby</p>
                     <p>Tore 3 ligaments in my first game. GG.</p>
                 </div>
                 <div class="interest">
                     <img src="images/logos/bw_oar.png" />
+                    <div class="clear"></div>
                     <p class="keyword">Rowing</p>
                     <p>Proudly rowed for USC Women's and the Hong Kong University of Science and Technology. </p>
                 </div>
                 <div class="interest">
                     <img src="images/logos/bw_rainbow.png" />
-                    <p class="keyword">Rainbows</p>
+                    <div class="clear"></div>
+                    <p class="keyword">LGBTQA issues</p>
                     <p>Strong supporter of equality for all, whether through volunteering, organizing professional events, or marching in a pride parade.</p>
                 </div>
                 <div class="interest">
                     <img src="images/logos/bw_mouse.png" />
-                    <p class="keyword">Tech</p>
+                    <div class="clear"></div>
+                    <p class="keyword">Diversity in tech</p>
                     <p>Innovation and diversity go hand in hand. As president of USC Women in Computing, I'm building community, supporting and raising up my lady peers in tech, and doing my part to keep the percentage of USC women in CS above 20%.</p>
                 </div>
-            </div>         <!-- interest-container -->
+            </div>
+            <!-- interest-container -->
             <div class="clear"></div>
         </div>
         <!-- interests -->
@@ -290,9 +282,7 @@
             <p><a href="https://www.linkedin.com/in/catherineji" target="_blank">LinkedIn</a></p>
             <p><a href="https://github.com/cather" target="_blank">Github</a></p>
             <p><a href="mailto:jicathyh@gmail.com">Email</a></p>
-            <p><a href="docs/CathyJi_Resume.pdf" target="_blank">Resume</a><p>
-            <div class="clear"></div>
-            <div class="logo"></div>
+            <p><a href="docs/CathyJi_Resume.pdf" target="_blank">Resume</a></p>
         </div>
         <!-- contact -->
 
@@ -301,10 +291,10 @@
 
     <footer>
         <p> Created by Cathy Ji </p>
+        <div class="logo"></div>
         <div class="clear"></div>
     </footer>
 
-    </div>
 </body>
 
 </html>
