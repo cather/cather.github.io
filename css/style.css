@@ -111,22 +111,23 @@ nav li {
   color: grey;
 }
 
-.grid[data-columns]::before {
+.resume_grid[data-columns]::before {
   content: '3 .column.size-1of3';
 }
 
 .subcaption{
   color:#7DB4B5;
+  font-size:90%;
 }
 
 #resume_section .blurb{
   color:#680148;
   display:block;
-  font-size:75%;
+  font-size:90%;
 }
 
 #honors p, #extra p, #skills p{
-  font-size:85%;
+  
   line-height:150%;
   margin:0;
   padding:0;
@@ -198,8 +199,8 @@ img.icon{
 }
 
 .project {
-  width:26%;
-  margin: 1%;
+  width:250px;
+  margin: 10px;
 }
 
 .project p{
@@ -210,8 +211,6 @@ img.icon{
   max-width: 150px;
   height:100px;
 }
-
-
 
 #interest-container{
   display:flex;
